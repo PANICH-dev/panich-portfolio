@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พานิช ธิมายอม - Business Systems Development Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Prompt', sans-serif;
+            background-color: #F8FAFC; /* Light Gray */
+            color: #0F172A; /* Navy Blue */
+            line-height: 1.6;
+        }
+        
+        /* Minimalist Chart Container */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            height: 300px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        
+        /* Soft, clean shadows for minimalism */
+        .minimal-shadow {
+            box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+        }
+        
+        /* Section styling */
+        section {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        .bg-white-section {
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-lg font-bold text-[#0F172A] tracking-wide uppercase text-sm">
+                Panich.T
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-500">
+                <a href="#overview" class="hover:text-[#0F172A] transition-colors">Overview</a>
+                <a href="#evolution" class="hover:text-[#0F172A] transition-colors">Evolution</a>
+                <a href="#highlights" class="hover:text-[#0F172A] transition-colors">Highlights</a>
+                <a href="#impact" class="hover:text-[#0F172A] transition-colors">Impact</a>
+                <a href="#roadmap" class="hover:text-[#0F172A] transition-colors">Roadmap</a>
+                <a href="#benchmark" class="hover:text-[#0F172A] transition-colors">Benchmark</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header id="overview" class="max-w-6xl mx-auto px-6 pt-24 pb-16 text-center">
+        <!-- Profile Image -->
+        <div class="relative w-40 h-40 mx-auto mb-8">
+            <img src="S__41730082.jpg" alt="พานิช ธิมายอม" class="w-full h-full object-cover rounded-full minimal-shadow border-4 border-white" onerror="this.src='https://placehold.co/400x400/0F172A/FFFFFF?text=PT'">
+        </div>
+        
+        <div class="inline-block px-4 py-1.5 border border-[#0F172A] text-[#0F172A] rounded-full text-xs font-semibold tracking-widest uppercase mb-6 bg-white minimal-shadow">
+            Business Systems Development Portfolio
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-[#0F172A] mb-4">
+            พานิช ธิมายอม
+        </h1>
+        <h2 class="text-xl md:text-2xl font-light text-gray-500 mb-8">
+            Business Systems Architecture & Development
+        </h2>
+        
+        <p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto font-light mb-12">
+            รับผิดชอบการพัฒนาระบบเทคโนโลยีสารสนเทศ บริหารจัดการข้อมูล และปรับปรุงกระบวนการปฏิบัติงาน (Process Improvement) เพื่อสนับสนุนและขับเคลื่อน 3 ธุรกิจหลัก ได้แก่ <strong>XPEL, RIZENIC</strong> และ <strong>TERN Logistic</strong>
+        </p>
+
+        <!-- Executive Summary KPI Cards (Updated) -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-5xl mx-auto">
+            <div class="bg-white p-5 rounded-2xl minimal-shadow border border-gray-100 flex flex-col justify-center items-center transform transition hover:-translate-y-1">
+                <div class="text-3xl font-bold text-[#0F172A] mb-2">3</div>
+                <div class="text-xs text-gray-500 uppercase tracking-widest text-center leading-tight">Business Units<br>Supported</div>
+            </div>
+            <div class="bg-white p-5 rounded-2xl minimal-shadow border border-gray-100 flex flex-col justify-center items-center transform transition hover:-translate-y-1">
+                <div class="text-3xl font-bold text-[#0F172A] mb-2">15+</div>
+                <div class="text-xs text-gray-500 uppercase tracking-widest text-center leading-tight">Systems &<br>Automations</div>
+            </div>
+            <div class="bg-white p-5 rounded-2xl minimal-shadow border border-gray-100 flex flex-col justify-center items-center transform transition hover:-translate-y-1">
+                <div class="text-3xl font-bold text-[#0F172A] mb-2">30+</div>
+                <div class="text-xs text-gray-500 uppercase tracking-widest text-center leading-tight">Files<br>Consolidated</div>
+            </div>
+            <div class="bg-white p-5 rounded-2xl minimal-shadow border border-gray-100 flex flex-col justify-center items-center transform transition hover:-translate-y-1">
+                <div class="text-3xl font-bold text-[#0F172A] mb-2">100%</div>
+                <div class="text-xs text-gray-500 uppercase tracking-widest text-center leading-tight">Real-Time<br>Visibility</div>
+            </div>
+            <!-- New 5th Card -->
+            <div class="bg-white p-5 rounded-2xl minimal-shadow border border-[#0F172A] flex flex-col justify-center items-center transform transition hover:-translate-y-1 md:col-span-1 col-span-2">
+                <div class="text-3xl font-bold text-[#0F172A] mb-2">0</div>
+                <div class="text-xs text-[#0F172A] uppercase tracking-widest text-center leading-tight font-semibold">Manual Warranty<br>Forms</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Role Evolution Section -->
+    <section id="evolution" class="bg-white-section border-y border-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-[#0F172A] mb-4">Role Expansion</h2>
+                <div class="w-12 h-1 bg-[#0F172A] mx-auto mb-6"></div>
+                <p class="text-gray-500 max-w-2xl mx-auto font-light">การยกระดับบทบาทจากผู้สนับสนุนการปฏิบัติงาน สู่การเป็นผู้ออกแบบและวางโครงสร้างระบบหลังบ้านเพื่อเพิ่มประสิทธิภาพองค์กร</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <!-- Comparison Layout -->
+                <div class="space-y-8">
+                    <div class="p-8 rounded-2xl bg-[#F8FAFC] border border-gray-100 minimal-shadow">
+                        <div class="text-xs font-bold text-gray-400 tracking-widest uppercase mb-4">Past Role</div>
+                        <h3 class="text-xl font-semibold text-gray-600 mb-4">Operation Support</h3>
+                        <ul class="space-y-3 text-gray-500 font-light">
+                            <li class="flex items-start"><span class="mr-3 text-gray-400">—</span> สนับสนุนงานประจำวันแบบ Manual</li>
+                            <li class="flex items-start"><span class="mr-3 text-gray-400">—</span> ประสานงานผ่านไฟล์เอกสารแยกส่วน</li>
+                            <li class="flex items-start"><span class="mr-3 text-gray-400">—</span> จัดทำรายงานรวบรวมข้อมูลเบื้องต้น</li>
+                        </ul>
+                    </div>
+
+                    <div class="p-8 rounded-2xl bg-[#0F172A] text-white minimal-shadow">
+                        <div class="text-xs font-bold text-gray-400 tracking-widest uppercase mb-4">Current Role</div>
+                        <h3 class="text-xl font-semibold text-white mb-4">Business Systems Analyst</h3>
+                        <ul class="space-y-4 text-gray-300 font-light">
+                            <li class="flex items-start">
+                                <span class="mr-3 text-white">❖</span> 
+                                <span><strong class="text-white font-medium">Business Architecture:</strong> วิเคราะห์ปัญหาและออกแบบ Workflow ใหม่ลดความซ้ำซ้อน</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-3 text-white">❖</span> 
+                                <span><strong class="text-white font-medium">App Development:</strong> พัฒนาแอปพลิเคชันและฐานข้อมูล (AppSheet, GAS)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="mr-3 text-white">❖</span> 
+                                <span><strong class="text-white font-medium">Data & Automation:</strong> จัดการข้อมูลส่วนกลาง สร้างระบบอัตโนมัติ ลดงานเอกสาร</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Radar Chart -->
+                <div class="p-8 bg-white rounded-2xl border border-gray-100 minimal-shadow h-full flex flex-col justify-center">
+                    <h4 class="text-center font-semibold text-[#0F172A] mb-2">Competency Shift</h4>
+                    <p class="text-center text-xs text-gray-400 mb-8 uppercase tracking-widest">Support vs Architecture</p>
+                    <div class="chart-container">
+                        <canvas id="competencyRadar"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Highlights -->
+    <section id="highlights">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-[#0F172A] mb-4">System Interfaces</h2>
+                <div class="w-12 h-1 bg-[#0F172A] mx-auto mb-6"></div>
+                <p class="text-gray-500 max-w-2xl mx-auto font-light">ตัวอย่างผลงานการออกแบบ UI/UX โครงสร้างฐานข้อมูล และ Workflow สำหรับธุรกิจ</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-2 rounded-xl border border-gray-100 minimal-shadow">
+                    <img src="resume พานิช ธิมายอม-03.jpg" alt="XPEL System" class="w-full h-auto rounded-lg object-cover" onerror="this.src='https://placehold.co/600x800/F8FAFC/0F172A?text=XPEL+System'">
+                    <p class="text-center text-sm text-[#0F172A] font-medium mt-4 mb-2">XPEL Management</p>
+                </div>
+                <div class="bg-white p-2 rounded-xl border border-gray-100 minimal-shadow">
+                    <img src="resume พานิช ธิมายอม-04 (1).jpg" alt="RIZENIC System" class="w-full h-auto rounded-lg object-cover" onerror="this.src='https://placehold.co/600x800/F8FAFC/0F172A?text=RIZENIC+System'">
+                    <p class="text-center text-sm text-[#0F172A] font-medium mt-4 mb-2">RIZENIC Dashboard</p>
+                </div>
+                <div class="bg-white p-2 rounded-xl border border-gray-100 minimal-shadow">
+                    <img src="resume พานิช ธิมายอม-02.jpg" alt="TERN Logistic" class="w-full h-auto rounded-lg object-cover" onerror="this.src='https://placehold.co/600x800/F8FAFC/0F172A?text=TERN+Logistic'">
+                    <p class="text-center text-sm text-[#0F172A] font-medium mt-4 mb-2">TERN Logistic</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Impact -->
+    <section id="impact" class="bg-white-section border-y border-gray-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-[#0F172A] mb-4">Tech-Driven Agility</h2>
+                <div class="w-12 h-1 bg-[#0F172A] mx-auto mb-6"></div>
+                <p class="text-gray-500 max-w-2xl mx-auto font-light">ข้อได้เปรียบจากการสร้างระบบให้องค์กรใช้งานตั้งแต่เริ่มต้นธุรกิจ (Day 1) เพื่อรากฐานที่แข็งแกร่ง</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-lg font-semibold text-[#0F172A]">Lean Operation (ลดต้นทุนแฝง)</h4>
+                        <p class="text-gray-500 font-light mt-2">ระบบ Automation ทำหน้าที่จัดการข้อมูล ตัดสต็อก และทำรายงานแทนคน ลดความจำเป็นในการจ้างธุรการ (Admin) ช่วยให้องค์กรโตด้วยต้นทุนบุคลากรที่ต่ำลง</p>
+                    </div>
+                    <div class="w-full h-px bg-gray-100"></div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-[#0F172A]">Agile Decision Making</h4>
+                        <p class="text-gray-500 font-light mt-2">ข้อมูลยอดขาย สต็อก และ Capacity แสดงผลแบบ Real-Time ตั้งแต่วันแรก ช่วยผู้บริหารตัดสินใจและปรับกลยุทธ์ได้ทันที</p>
+                    </div>
+                    <div class="w-full h-px bg-gray-100"></div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-[#0F172A]">Zero Legacy Issues</h4>
+                        <p class="text-gray-500 font-light mt-2">ขจัดปัญหาข้อมูลหายหรือมาตรฐานไม่ตรงกัน ด้วย System Workflow ที่ควบคุมทุกสาขาเป็นมาตรฐานเดียว</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#F8FAFC] rounded-2xl p-8 border border-gray-100 minimal-shadow">
+                    <h4 class="text-center font-semibold text-[#0F172A] mb-2">Efficiency Metrics</h4>
+                    <p class="text-center text-xs text-gray-400 mb-8 uppercase tracking-widest">System Value</p>
+                    <div class="chart-container">
+                        <canvas id="impactBarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-[#0F172A] mb-4">Future Roadmap</h2>
+                <div class="w-12 h-1 bg-[#0F172A] mx-auto mb-6"></div>
+                <p class="text-gray-500 max-w-2xl mx-auto font-light">แผนงานพัฒนาขีดความสามารถของระบบ เพื่อรองรับการเติบโตอย่างยั่งยืน</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100 minimal-shadow text-center">
+                    <div class="w-10 h-10 mx-auto bg-[#0F172A] text-white rounded-full flex items-center justify-center font-bold mb-4">1</div>
+                    <h4 class="font-semibold text-[#0F172A] mb-2">SQL Migration</h4>
+                    <p class="text-sm text-gray-500 font-light">ย้ายฐานข้อมูลสู่ระบบ SQL เพื่อรองรับ Data ปริมาณมหาศาล</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100 minimal-shadow text-center">
+                    <div class="w-10 h-10 mx-auto border-2 border-[#0F172A] text-[#0F172A] rounded-full flex items-center justify-center font-bold mb-4">2</div>
+                    <h4 class="font-semibold text-[#0F172A] mb-2">Advanced BI</h4>
+                    <p class="text-sm text-gray-500 font-light">พัฒนาระบบ Business Intelligence เพื่อวิเคราะห์แนวโน้มธุรกิจ</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100 minimal-shadow text-center">
+                    <div class="w-10 h-10 mx-auto border-2 border-[#0F172A] text-[#0F172A] rounded-full flex items-center justify-center font-bold mb-4">3</div>
+                    <h4 class="font-semibold text-[#0F172A] mb-2">Web Portal</h4>
+                    <p class="text-sm text-gray-500 font-light">แพลตฟอร์มให้ลูกค้าเช็คสิทธิประโยชน์และสถานะงานบริการ</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100 minimal-shadow text-center">
+                    <div class="w-10 h-10 mx-auto border-2 border-[#0F172A] text-[#0F172A] rounded-full flex items-center justify-center font-bold mb-4">4</div>
+                    <h4 class="font-semibold text-[#0F172A] mb-2">AI Integration</h4>
+                    <p class="text-sm text-gray-500 font-light">ศึกษาการใช้ AI เพื่อแจ้งเตือนความผิดปกติและหาโอกาสธุรกิจใหม่</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Benchmark Section (NEW) -->
+    <section id="benchmark" class="bg-[#F8FAFC] border-y border-gray-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-[#0F172A] mb-4">Market Benchmark</h2>
+                <div class="w-12 h-1 bg-[#0F172A] mx-auto mb-6"></div>
+                <p class="text-gray-500 max-w-2xl mx-auto font-light">เปรียบเทียบโครงสร้างเงินเดือนปัจจุบัน กับมูลค่าที่แท้จริงของเนื้องานที่รับผิดชอบ</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
+                <!-- Left: Current Salary -->
+                <div class="bg-white p-10 rounded-2xl border border-gray-200 minimal-shadow text-center flex flex-col justify-center">
+                    <div class="inline-block mx-auto mb-4 bg-gray-100 p-3 rounded-full">
+                        <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div class="text-sm font-bold text-gray-400 tracking-widest uppercase mb-4">เงินเดือนปัจจุบัน</div>
+                    <div class="text-5xl font-bold text-[#0F172A] mb-2">36,000 <span class="text-xl font-medium text-gray-500">THB</span></div>
+                    <p class="text-gray-500 font-light text-sm mt-4">อ้างอิงฐานเงินเดือนในระดับ<br>Operation Support ทั่วไป</p>
+                </div>
+
+                <!-- Right: Actual Roles Performed -->
+                <div class="bg-[#0F172A] p-10 rounded-2xl minimal-shadow flex flex-col justify-center relative overflow-hidden">
+                    <!-- Decorative element -->
+                    <div class="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-white opacity-5 rounded-full blur-2xl"></div>
+                    
+                    <div class="text-sm font-bold text-gray-400 tracking-widest uppercase mb-6 text-center relative z-10">ตำแหน่งที่รับผิดชอบจริง (Actual Roles)</div>
+                    
+                    <div class="space-y-4 relative z-10">
+                        <div class="bg-white/10 p-4 rounded-xl border border-white/10 flex items-center transition hover:bg-white/20">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-xl mr-4">📊</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Business Systems Analyst</h4>
+                                <p class="text-xs text-gray-400 mt-1 font-light">วิเคราะห์และออกแบบระบบ</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-xl border border-white/10 flex items-center transition hover:bg-white/20">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-xl mr-4">💻</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Application Developer</h4>
+                                <p class="text-xs text-gray-400 mt-1 font-light">พัฒนาแอปพลิเคชันและฐานข้อมูล</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-xl border border-white/10 flex items-center transition hover:bg-white/20">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-xl mr-4">⚙️</div>
+                            <div>
+                                <h4 class="text-white font-semibold">Process Improvement</h4>
+                                <p class="text-xs text-gray-400 mt-1 font-light">วาง Workflow ลดระยะเวลาการทำงาน</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Growth Discussion -->
+    <section id="growth" class="bg-[#0F172A] text-white">
+        <div class="max-w-6xl mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                
+                <!-- Left: Compensation Request -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Professional Growth Discussion</h2>
+                    <p class="text-gray-300 font-light mb-8 leading-relaxed">
+                        จากบทบาทที่เปลี่ยนแปลงจาก Operation Support สู่ Business Systems Analyst และผู้พัฒนาโครงสร้างพื้นฐานด้านข้อมูลขององค์กร จึงใคร่ขอรับการพิจารณาทบทวนโครงสร้างค่าตอบแทนให้สอดคล้องกับขอบเขตความรับผิดชอบ และมูลค่าทางธุรกิจที่ส่งมอบให้แก่องค์กรในปัจจุบัน (อ้างอิงเปรียบเทียบจากตาราง Market Benchmark ด้านบน)
+                    </p>
+                    
+                    <div class="bg-white rounded-xl p-6 text-[#0F172A] mb-8">
+                        <div class="text-xs text-gray-500 uppercase tracking-widest mb-2 font-bold">Expected Outcome</div>
+                        <div class="text-lg font-medium text-[#0F172A]">
+                            พิจารณาปรับค่าตอบแทนตามความเหมาะสมของขอบเขตงาน ผลงาน และระดับความรับผิดชอบในปัจจุบัน
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-blue-200 font-light leading-relaxed p-4 border-l-2 border-blue-400 bg-blue-900/30">
+                        ข้าพเจ้ายังมีแผนพัฒนาระบบในระยะถัดไป ทั้งด้าน SQL Database, Business Intelligence, Customer Portal และ AI Reporting เพื่อสนับสนุนการเติบโตของบริษัทในระยะยาว
+                    </p>
+                </div>
+                
+                <!-- Right: Business Value Summary -->
+                <div class="md:mt-12">
+                    <h4 class="text-lg font-semibold text-white mb-6 border-b border-white/20 pb-3">Business Value Delivered</h4>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                            <div class="text-2xl mb-2">&#128194;</div>
+                            <h5 class="text-white font-semibold mb-1">Data Management</h5>
+                            <p class="text-sm text-gray-400 font-light">30+ Files Consolidated</p>
+                        </div>
+                        
+                        <div class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                            <div class="text-2xl mb-2">&#9889;</div>
+                            <h5 class="text-white font-semibold mb-1">Process Automation</h5>
+                            <p class="text-sm text-gray-400 font-light">Warranty & Stock Automation</p>
+                        </div>
+                        
+                        <div class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                            <div class="text-2xl mb-2">&#128200;</div>
+                            <h5 class="text-white font-semibold mb-1">Real-Time Reporting</h5>
+                            <p class="text-sm text-gray-400 font-light">Management Dashboard</p>
+                        </div>
+
+                        <div class="bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
+                            <div class="text-2xl mb-2">&#9881;</div>
+                            <h5 class="text-white font-semibold mb-1">Capacity Control</h5>
+                            <p class="text-sm text-gray-400 font-light">Operation Planning System</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white border-t border-gray-100 py-8 text-center text-sm text-gray-400">
+        <p>&copy; 2024 Business Systems Development Portfolio.</p>
+        <p class="mt-1">Prepared by พานิช ธิมายอม</p>
+    </footer>
+
+    <!-- Scripts for Charts -->
+    <script>
+        function wrapLabel(label) {
+            if (label.length <= 16) return label;
+            const words = label.split(' ');
+            let lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > 16) {
+                    if (currentLine.length > 0) lines.push(currentLine.trim());
+                    currentLine = word + ' ';
+                } else {
+                    currentLine += word + ' ';
+                }
+            });
+            if (currentLine.trim().length > 0) lines.push(currentLine.trim());
+            return lines.length === 1 ? lines[0] : lines;
+        }
+
+        const commonTooltipConfig = {
+            tooltip: {
+                callbacks: {
+                    title: function(tooltipItems) {
+                        const item = tooltipItems[0];
+                        let label = item.chart.data.labels[item.dataIndex];
+                        return Array.isArray(label) ? label.join(' ') : label;
+                    }
+                }
+            }
+        };
+
+        // 1. Radar Chart (Competency)
+        const radarLabelsRaw = [
+            'Routine Admin Support',
+            'Architecture & Workflow',
+            'App Development',
+            'Data & Automation',
+            'Business Intelligence'
+        ];
+        const ctxRadar = document.getElementById('competencyRadar').getContext('2d');
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: radarLabelsRaw.map(wrapLabel),
+                datasets: [
+                    {
+                        label: 'Past Role',
+                        data: [90, 20, 10, 15, 10],
+                        backgroundColor: 'rgba(241, 245, 249, 0.5)', // Slate 100
+                        borderColor: '#CBD5E1', // Slate 300
+                        pointBackgroundColor: '#CBD5E1',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Current Role',
+                        data: [10, 85, 90, 85, 70],
+                        backgroundColor: 'rgba(15, 23, 42, 0.1)', // Navy transparent
+                        borderColor: '#0F172A', // Navy
+                        pointBackgroundColor: '#0F172A',
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: '#F1F5F9' },
+                        grid: { color: '#F1F5F9' },
+                        pointLabels: {
+                            font: { family: "'Prompt', sans-serif", size: 11 },
+                            color: '#64748B'
+                        },
+                        ticks: { display: false, min: 0, max: 100 }
+                    }
+                },
+                plugins: {
+                    ...commonTooltipConfig,
+                    legend: { position: 'bottom', labels: { font: { family: "'Prompt', sans-serif" } } }
+                }
+            }
+        });
+
+        // 2. Bar Chart (Impact Metrics)
+        const barLabelsRaw = [
+            'Data Processing Speed',
+            'Accuracy Rate',
+            'Admin Workload',
+            'Reporting Delay'
+        ];
+        const ctxBar = document.getElementById('impactBarChart').getContext('2d');
+        new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: barLabelsRaw.map(wrapLabel),
+                datasets: [
+                    {
+                        label: 'Traditional',
+                        data: [30, 60, 95, 90],
+                        backgroundColor: '#E2E8F0', // Gray
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'System-Driven',
+                        data: [95, 98, 15, 5],
+                        backgroundColor: '#0F172A', // Navy
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: { display: false },
+                        grid: { borderDash: [5, 5], color: '#F1F5F9' }
+                    },
+                    x: { grid: { display: false }, ticks: { font: { family: "'Prompt', sans-serif" }, color: '#64748B' } }
+                },
+                plugins: {
+                    ...commonTooltipConfig,
+                    legend: { position: 'top', labels: { font: { family: "'Prompt', sans-serif" } } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
